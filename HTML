@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedstrijdschema App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.6/xlsx.full.min.js"></script>
+</head>
+<body>
+    <h1>Wedstrijdschema Inladen</h1>
+
+    <!-- Formulier voor het uploaden van Excel bestand -->
+    <div>
+        <input type="file" id="excelFile" />
+        <button onclick="uploadExcel()">Upload Excel</button>
+    </div>
+
+    <!-- Formulier voor teamgegevens -->
+    <div>
+        <h2>Teams Invoeren</h2>
+        <div id="teamInput">
+            <!-- Teams en spelers invoeren -->
+            <label>Team A: </label><input type="text" id="teamA" placeholder="Speler 1, Speler 2" />
+            <label>Team B: </label><input type="text" id="teamB" placeholder="Speler 1, Speler 2" />
+        </div>
+        <button onclick="assignPlayers()">Teams Toewijzen</button>
+    </div>
+
+    <!-- Wedstrijdschema weergave -->
+    <div>
+        <h2>Wedstrijdschema</h2>
+        <table id="wedstrijdTable">
+            <thead>
+                <tr>
+                    <th>Datum</th>
+                    <th>Thuisteam</th>
+                    <th>Uitteam</th>
+                    <th>Scheidsrechter 1</th>
+                    <th>Scheidsrechter 2</th>
+                    <th>Timer</th>
+                    <th>Scorer</th>
+                    <th>24sec Operator</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Wedstrijden worden hier ingevuld -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
